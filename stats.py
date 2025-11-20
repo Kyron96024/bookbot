@@ -9,10 +9,11 @@ def get_each_char(text):
     list_dict = []
     char_dict = {}
     for char in text:
-        if char.lower() in char_dict.keys():
-            char_dict[char.lower()] += 1
-        else:
-            char_dict[char.lower()] = 1
+        if char.isalpha():
+            if char.lower() in char_dict.keys():
+                char_dict[char.lower()] += 1
+            else:
+                char_dict[char.lower()] = 1
     for char in char_dict:
         one_dict = {}
         one_dict["char"] = char
